@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+header{
+  background: rgb(34, 130, 208);
+  display: grid;
+  grid-template-columns: 25% 75%;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+}
+
+.title{
+  margin-left: 50px;
+  font-size: 40px;
+  color: white;
+}
+
+.nav{
+  text-align: center;
+}
+
+.nav__ul{
+  list-style: none;
+}
+
+.ul__li{
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.li__a{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+.li__a:hover{
+  color: #ccc;
+}
+
+.hidden-nav{
+  display: none;
+}
+
+.icon:hover{
+  color: #ccc;
+  transition: all .2s linear;
+}
+
+@media (max-width: 875px){
+  .ul__li{
+    margin-left: 25px;
+  }
+  .li__a{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 670px){
+  .title{
+    font-size: 30px;
+  }
+  .nav{
+    display: none;
+  }
+  .hidden-nav{
+    display: inline-block;
+    text-align: right;
+  }
+
+  .nav__ul{
+    position: absolute;
+    bottom: 1000px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .icon{
+    margin-right: 100px;
+    color: white;
+    scale: 2;
+  }
+
+  /* El hover esta fuera */
+
+  .ul__li{
+    display: block;
+  }
+}
