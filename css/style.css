@@ -1,3 +1,7 @@
+:root{
+  --principal-color: rgb(34, 130, 208);
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -6,7 +10,7 @@
 }
 
 header{
-  background: rgb(34, 130, 208);
+  background: var(--principal-color);
   display: grid;
   grid-template-columns: 25% 75%;
   width: 100%;
@@ -24,7 +28,8 @@ header{
   text-align: center;
 }
 
-.nav__ul{
+.nav__ul,
+.hidden-nav__ul{
   list-style: none;
 }
 
@@ -74,15 +79,18 @@ header{
     text-align: right;
   }
 
-  .nav__ul{
-    position: absolute;
-    bottom: 1000px;
+  .hidden-nav__ul{
+    background: var(--principal-color);
     display: inline-block;
+    width: 80%;
+    margin-left: 1000px;
     text-align: center;
+    border-radius: 0px 0px 0px 20px;
+    transition: all .3s linear;
   }
 
   .icon{
-    margin-right: 100px;
+    margin-right: 26%;
     color: white;
     scale: 2;
   }
@@ -91,5 +99,11 @@ header{
 
   .ul__li{
     display: block;
+  }
+}
+
+@media (max-width: 555px){
+  .hidden-nav__ul{
+    width: 80%;
   }
 }
